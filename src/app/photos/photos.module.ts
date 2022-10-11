@@ -12,7 +12,7 @@ import { PhotoDetailsModule } from './photo-details/photo-details.module';
         PhotoModule,
         PhotoFormModule,
         PhotoListModule, 
-        PhotoDetailsModule    
+        PhotoDetailsModule,   
     ]
 })
 export class PhotosModule {
