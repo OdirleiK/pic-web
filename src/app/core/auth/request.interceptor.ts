@@ -22,7 +22,7 @@ export class RequestInterceptor implements HttpInterceptor {
             const token = this.tokenService.getToken();
             req = req.clone({
                 setHeaders: {
-                    'x-access-toke': token
+                    'x-access-token': token
                 }
             });
         }
