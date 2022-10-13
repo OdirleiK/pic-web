@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoadingService } from 'src/app/shared/components/loading/loading.service';
 
 import { Photo } from '../photo/photo';
 import { PhotoService } from '../photo/photo.service';
@@ -18,7 +19,10 @@ export class PhotoListComponent implements OnInit {
   currentPage: number = 1;
   userName: string = '';
   
-  constructor(private activatedRoute: ActivatedRoute, private photoService: PhotoService)  { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private photoService: PhotoService,
+     )  { }
   
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
